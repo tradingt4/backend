@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: backend
+    runtime: node             # en vez de `env: node`
+    region: ohio              # uno de: oregon, ohio, frankfurt, singapore, virginia
+    branch: master
+    buildCommand: npm install
+    startCommand: node build/index.js
+    plan: free
+    envVars:
+      - key: PORT
+        value: 3000
