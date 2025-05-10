@@ -8,7 +8,7 @@ import {
   getCurrentUser,
   getRoomUsers,
   userJoin,
-  userLeave,
+  userLeave,a
 } from "./utils/users";
 import User from "./@types/user";
 import { connectDB } from "./database/config";
