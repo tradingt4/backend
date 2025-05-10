@@ -1,24 +1,20 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Dependencies
-/node_modules
+/node_modules/
 /.pnp
 .pnp.js
 
 # Build output
-/build
-/dist
+build/
+/dist/
 
-# Uploaded files (if not meant to be versioned)
-uploads/
+# Uploaded files - INCLUIR si se necesitan en producción
+# Si quieres subir "uploads", elimina la línea siguiente:
+# uploads/
 
 # TypeScript
 *.tsbuildinfo
-
-# Environment variables
-.env
-.env.*
-!.env.example
 
 # Logs
 logs/
@@ -28,13 +24,13 @@ yarn-debug.log*
 yarn-error.log*
 
 # Coverage reports
-/coverage
+coverage/
 
 # IDE/editor settings
 .vscode/
 .idea/
 *.swp
 
-# OS files
+# OS-specific files
 .DS_Store
 Thumbs.db

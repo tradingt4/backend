@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: quickstep-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    runtime: node
+    region: oregon  # o usa frankfurt si estás en Europa
+    branch: main    # cambia si tu branch no es "main"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000  # tu app debe leer process.env.PORT
+      - key: MONGO_URI
+        sync: false   # Render te pedirá que lo definas desde el dashboard
+      - key: JWT_SECRET
+        sync: false   # lo mismo, lo defines como secreto seguro
